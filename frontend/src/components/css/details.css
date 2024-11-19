@@ -1,0 +1,93 @@
+.home-button {
+    top: 10px;
+    left: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+  }
+  
+  .home-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .scroll-to-top {
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .scroll-to-top:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+  }
+  
+  div > ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+  }
+  
+  div > ul > li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    width: 120px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  div > ul > li > img {
+    margin-bottom: 10px;
+    width: 60px;
+  }
+  
+  div > ul > li > a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  div > ul > li > a:hover {
+    text-decoration: underline;
+  }
+  
+
+  div > h1,
+  div > p {
+    text-align: center;
+  }
+  
+  div > img {
+    display: block;
+    margin: 0 auto 20px;
+  }
+  
