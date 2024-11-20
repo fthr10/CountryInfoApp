@@ -11,7 +11,6 @@ import {
   Legend
 } from 'chart.js';
 
-
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -26,13 +25,18 @@ const PopulationChart = ({ countryCode }) => {
   const [populationData, setPopulationData] = useState([]);
   const [loading, setLoading] = useState(true); 
 
-
   useEffect(() => {
+    // Eğer ülke 'Russia' ise, 'Russian Federation' olarak değiştiriyoruz
+    let adjustedCountryCode = countryCode;
+    if (countryCode === "Russia") {
+      adjustedCountryCode = "Russian Federation";
+    }
+
     fetch(`https://countriesnow.space/api/v0.1/countries/population/`)
       .then(response => response.json())
       .then(data => {
         const countryData = data.data.find(
-          (country) => country.country === countryCode
+          (country) => country.country === adjustedCountryCode
         );
         
         if (countryData) {
@@ -50,12 +54,10 @@ const PopulationChart = ({ countryCode }) => {
       });
   }, [countryCode]);
 
- 
   if (loading) {
     return <p>Loading population data...</p>;
   }
 
- 
   const chartData = {
     labels: populationData.map((item) => item.year),
     datasets: [
