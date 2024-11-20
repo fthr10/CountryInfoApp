@@ -48,7 +48,7 @@ const Details = () => {
         height="100"
       />
       <p>Country Code: {country.cca3}</p>
-      <p>Population: {country.population}</p>
+      <p>Population: {new Intl.NumberFormat('de-DE').format(country.population)}</p>
 
       <h2>Border Countries:</h2>
       <ul>
